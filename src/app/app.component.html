@@ -1,1 +1,12 @@
 Here I am! Your first app with Angular and DATABASE!
+
+<ul>
+  <li *ngFor="let man of people">
+    {{ man.name}} - {{ man.age }}
+  </li>
+</ul>
+
+
+<button class="btn btn-primary" (click)="getBooks()">
+  Получить список книг?
+</button>
