@@ -10,3 +10,11 @@ Here I am! Your first app with Angular and DATABASE!
 <button class="btn btn-primary" type="button" (click)="clickOnButton()">
   get All
 </button>
+
+<br >
+<br >
+<br >
+<input type="text" [(ngModel)]="bookTitle">
+<button (click)="addBookToServer(bookTitle)">
+	Add Book
+</button>

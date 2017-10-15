@@ -18,6 +18,8 @@ export class AppComponent implements OnInit {
 
   title = 'app';
 
+  public bookTitle: string;
+
   books: any[] = [
   	{
   		title: 'Static First book',
@@ -36,7 +38,7 @@ export class AppComponent implements OnInit {
   }
 
   clickOnButton() {
-    this.getdataserviceService.getInfoFromServer()
+    this.getdataserviceService.getBooksFromServer()
       .subscribe(
          (response) => {this.addBooksToList(response.json()), console.log(response.json())},
          (err) => console.log(err)
@@ -48,4 +50,12 @@ export class AppComponent implements OnInit {
       this.books.push({title: item.title})
     })
   }
+
+  addBookToServer(bookTitle) {
+    let body = [{ "title" : bookTitle}];
+    this.getdataserviceService.addInfoFromServer(body)
+      .subscribe( (response)=> {console.log(response)},
+        (error)=> {console.log(error)})
+  }
+
 }
