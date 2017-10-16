@@ -1,0 +1,20 @@
+<p>
+  Book - list component
+</p>
+
+<ul>
+	<li *ngFor="let book of books" class="books-list-item">
+	{{ book.title}}
+	<span class="remove-book-button" (click)="deleteItem(book)">
+		Delete this book
+	</span>
+	</li>
+</ul>
+
+<hr >
+
+<input type="text" [(ngModel)]="bookTitle">
+
+<button (click)="addBookToServer(bookTitle)">
+	Add Book	
+</button>

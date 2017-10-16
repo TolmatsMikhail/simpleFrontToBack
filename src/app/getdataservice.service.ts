@@ -13,8 +13,7 @@ export class GetdataserviceService {
   addInfoFromServer(data: any) {
   	let jsonData = JSON.stringify(data);
   	let headers = new Headers({ 'Content-Type': 'application/json' });
-  	let options = new RequestOptions({ withCredentials: true, headers: headers  });
+  	let options = new RequestOptions({ withCredentials: false, headers: headers  });
   	return this.http.post('http://localhost:3000/books', jsonData, options);
   }
-
 }

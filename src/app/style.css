@@ -1,0 +1,73 @@
+main{
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+.buttons{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+}
+.buttons_router{
+	display: block;
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	padding: 10px 20px;
+	background-color: #7f7fff;
+	border-radius: 10px;
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
+	transition: all 100ms linear;
+}
+.buttons_router:hover{
+	background-color: #6666ff;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,76,1);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,76,1);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,76,1);
+	transition: all 100ms linear;
+}
+.go-back-button{
+	display: inline-block;
+	color: #000000;
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+	background-color: #7f7fff;
+	cursor: pointer;
+	border-radius: 5px;
+	padding: 10px 15px;
+	margin: 20px auto;
+}
+.remove-book-button{
+	vertical-align: top;
+	border: 1px solid red;
+	border-radius: 5px;
+	font-size: 12px;
+	line-height: 15px;
+	text-align: center;
+	padding: 0 5px;
+	font-weight: bold;
+	display: none;
+}
+.books-list-item{
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	color: darkblue;
+	padding: 10px 0 0 0;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.books-list-item:hover > .remove-book-button{
+	display: inline-block;
+}
+.not-found-page-title{
+	font-size: 40px;
+	font-weight: 600;
+	text-align: center;
+}
